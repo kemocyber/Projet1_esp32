@@ -135,12 +135,10 @@ void loop() {
         Serial.println(level);
 
         if (strcmp(level, "user") == 0 || strcmp(level, "admin") == 0) {
-          Serial.println("Accès autorisé");
           digitalWrite(VERT, HIGH);
           digitalWrite(ROUGE, LOW);
           delay(2000);
         } else {
-          Serial.println("Badge inconnu ou non autorisé.");
           digitalWrite(VERT, LOW);
           digitalWrite(ROUGE, HIGH);
           delay(2000);
